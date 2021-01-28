@@ -1,0 +1,17 @@
+button{
+  width: 95px;
+  height: 25px;
+  padding: 1px;
+
+  border: 2px;
+  border-width: 4px;
+  border-style: outset;
+  border-color: gray;
+  border-image: initial;
+
+  font: 400 13.3333px Arial;
+}
+#exFrame {
+  transform: scale(0.9);
+  transform-origin: left;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "BKB Stundenplan",
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "developer": {
+    "name": "Nicolas Groß"
+  },
+  "description": "Schnellfenster  für den BKB Stundenplan",
+  "icons": {
+    "48": "logo48.png",
+    "96": "logo96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "test"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}
