@@ -6,15 +6,137 @@
     <link rel="stylesheet" href="popup.css">
   </head>
   <body>
-    <div class="">
+    <div id="buttonList">
       <button type="button" name="save">Speichern</button>
       <a href="https://stundenplan.berufskolleg-bottrop.de/schueler/" target="_blank"><button>Stundenplan</button></a>
       <a href="https://moodle.berufskolleg-bottrop.de" target="_blank"><button>Moodle</button></a>
       <a href="https://scloud.berufskolleg-bottrop.de" target="_blank"><button>SCloud</button></a>
     </div>
+    <select id="sel" class="selectbox">
+        <option value="1">1G 18 A</option>
+        <option value="2">1G 18 B</option>
+        <option value="3">1G 19 A</option>
+        <option value="4">1G 19 B</option>
+        <option value="5">1G 20 A</option>
+        <option value="6">1I 18 A</option>
+        <option value="7">1I 19 A</option>
+        <option value="8">1I 20 A</option>
+        <option value="9">1W 18 A</option>
+        <option value="10">1W 19 A</option>
+        <option value="11">1W 20 A</option>
+        <option value="12">2C 18 A</option>
+        <option value="13">2C 19 A</option>
+        <option value="14">2C 20 A</option>
+        <option value="15">2E 19 A</option>
+        <option value="16">2E 20 A</option>
+        <option value="17">2G 19 A</option>
+        <option value="18">2G 19 B</option>
+        <option value="19">2G 19 C</option>
+        <option value="20">2G 19 D</option>
+        <option value="21">2G 20 A</option>
+        <option value="22">2G 20 B</option>
+        <option value="23">2G 20 C</option>
+        <option value="24">2G 20 H</option>
+        <option value="25">2I 17 A</option>
+        <option value="26">2I 18 A</option>
+        <option value="27">2I 19 A</option>
+        <option value="28">2I 20 A</option>
+        <option value="29">2K 18 A</option>
+        <option value="30">2K 19 A</option>
+        <option value="31">2K 20 A</option>
+        <option value="32">2T 19 A</option>
+        <option value="33">2T 20 A</option>
+        <option value="34">2T 20 B</option>
+        <option value="35">2W 19 A</option>
+        <option value="36">2W 19 B</option>
+        <option value="37">2W 19 C</option>
+        <option value="38">2W 20 A</option>
+        <option value="39">2W 20 B</option>
+        <option value="40">2W 20 C</option>
+        <option value="41">4G 20 A</option>
+        <option value="42">4H 20 A</option>
+        <option value="43">4Q 20 A</option>
+        <option value="44">4T 20 A</option>
+        <option value="45">4T 20 B</option>
+        <option value="46">4W 20 A</option>
+        <option value="47">4W 20 B</option>
+        <option value="48">5H 20 A</option>
+        <option value="49">5Q 20 A</option>
+        <option value="50">5T 20 A</option>
+        <option value="51">5W 20 A</option>
+        <option value="52">6F 20 A</option>
+        <option value="53">6H 20 A</option>
+        <option value="54">6Q 20 A</option>
+        <option value="55">6T 20 A</option>
+        <option value="56">6W 20 A</option>
+        <option value="57">AS 17 A</option>
+        <option value="58">AS 18 A</option>
+        <option value="59">AS 19 A</option>
+        <option value="60">AS 20 A</option>
+        <option value="61">AV 20 A</option>
+        <option value="62">AV 20 B</option>
+        <option value="63">AV 20 C</option>
+        <option value="64">Beratung</option>
+        <option value="65">Berufsberatung</option>
+        <option value="66">Bibliothek</option>
+        <option value="67">BM 18 A</option>
+        <option value="68">BM 19 A</option>
+        <option value="69">BM 20 A</option>
+        <option value="70">Dienstlich Sonstiges</option>
+        <option value="71">EH 18 A</option>
+        <option value="72">EH 18 B</option>
+        <option value="73">EH 19 A</option>
+        <option value="74">EH 19 B</option>
+        <option value="75">EH 19 C</option>
+        <option value="76">EH 20 A</option>
+        <option value="77">EH 20 B</option>
+        <option value="78">EH 20 C</option>
+        <option value="79">EL 17 A</option>
+        <option value="80">EL 18 A</option>
+        <option value="81">EL 19 A</option>
+        <option value="82">EL 20 A</option>
+        <option value="83">Europa</option>
+        <option value="84">Europasprechstunde</option>
+        <option value="85">GH 18 A</option>
+        <option value="86">GH 19 A</option>
+        <option value="87">GH 19 B</option>
+        <option value="88">GH 20 A</option>
+        <option value="89">Handelsassistenten</option>
+        <option value="90">KM 17 A</option>
+        <option value="91">KM 18 A</option>
+        <option value="92">KM 19 A</option>
+        <option value="93">KM 20 A</option>
+        <option value="94">LA 19 A</option>
+        <option value="95">LA 20 A</option>
+        <option value="96">Lernförederung</option>
+        <option value="97">LRat</option>
+        <option value="98">MF 18 A</option>
+        <option value="99">MF 18 B</option>
+        <option value="100">MF 19 A</option>
+        <option value="101">MF 19 B</option>
+        <option value="102">MF 20 A</option>
+        <option value="103">MF 20 B</option>
+        <option value="104">Radio-AG</option>
+        <option value="105">Sprechstunde</option>
+        <option value="106">VM 18 A</option>
+        <option value="107">VM 19 A</option>
+        <option value="108">VM 20 A</option>
+        <option value="109">Zertifikatskurs</option>
+        <option value="110">Lehrerausbildung am Seminar</option>
+        <option value="111">ZM 17 A</option>
+        <option value="112">ZM 18 A</option>
+        <option value="113">ZM 19 A</option>
+        <option value="114">ZM 20 A</option>
+        <option value="115">GH 20 B</option>
+        <option value="116">LA 20 B</option>
+        <option value="117">ext Ber</option>
+      </select>
 
-    <iframe id="exFrame" src="https://stundenplan.berufskolleg-bottrop.de/schueler/" scrolling="auto">
+      <script src="popup.js" charset="utf-8"></script>
+
+    <iframe id="exFrame" src="https://stundenplan.berufskolleg-bottrop.de/schueler/04/c/c00007.htm" scrolling="auto">
+
+    <script src="popup.js" charset="utf-8"></script>
+    <script src="data.js" charset="utf-8"></script>
   </body>
-  <script src="popup.js" charset="utf-8"></script>
-  <script src="data.js" charset="utf-8"></script>
 </html>

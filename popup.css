@@ -38,6 +38,7 @@ button:active{
 }
 
 #exFrame {
+  background-color: white;
   transform: scale(0.9);
   transform-origin: left;
   width: 780px;

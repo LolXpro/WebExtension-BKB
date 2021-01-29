@@ -1,15 +1,24 @@
-document.getElementsByName('save').addEventListener("saveData", saveData());
+var fs = require("fs");
+var input, data, json;
+var filename = "data.txt";
+
+function play() {
+  var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');
+  audio.play();
+}
+
+document.getElementsByName('save').addEventListener("click", saveData);
+document.getElementsByName('save').addEventListener("click", play);
 
 function saveData() {
-  var input = document.querySelector("body > table > tbody > tr > td > form > table > tbody > tr > td:nth-child(3) > span > nobr > select").selectedOptions[0].value;
-  var data =
-  {
-      "selected": ""
-  };
-  if(input!=null) {
-    alert("Saved");
-  };
 
+  input = String(document.querySelector("body > select").selectedOptions[0].value);
+  data = '{"selected": '+ input +'}';
+
+  json = JSON.stringify(data);
+
+  fs.writeFile(filename, json, "utf8", callback);
+  audio.play();
 }
 
 function loadData() {
