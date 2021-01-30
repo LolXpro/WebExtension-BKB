@@ -19,15 +19,21 @@ function getWeekNumber() {
 
 function reload(){
   var i = String(getWeekNumber());
-  while(i.length<2){
-    i = "0" + i;
-  }
-
   var k = String(document.querySelector("body > select").selectedOptions[0].value);
-  while(k.length<5){
-    k = "0" + k;
-  }
+  if(k!=0){
 
-  var url = "https://stundenplan.berufskolleg-bottrop.de/schueler/" + i + "/c/c" + k + ".htm";
-  document.querySelector("#exFrame").src = url;
+    while(i.length<2){
+      i = "0" + i;
+    }
+
+    while(k.length<5){
+      k = "0" + k;
+    }
+
+    var url = "https://stundenplan.berufskolleg-bottrop.de/schueler/" + i + "/c/c" + k + ".htm";
+    document.querySelector("#exFrame").src = url;
+  }else{
+    var url = "default.html";
+    document.querySelector("#exFrame").src = url;
+  }
 }
