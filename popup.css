@@ -1,5 +1,10 @@
+html{
+  height: 500px;
+
+}
 body{
   width: 705px
+
 }
 div{
   margin: 0;
@@ -36,11 +41,16 @@ button:hover{
 button:active{
     background-color: #7C7C7C;
 }
+#sel
+{
+         width: 90px;
+         font-size: 16px;
 
+}
 #exFrame {
   background-color: white;
   transform: scale(0.9);
   transform-origin: left;
   width: 780px;
-  height: 490px;
+  height: 555px;
 }

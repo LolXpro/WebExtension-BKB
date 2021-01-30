@@ -1,26 +1,29 @@
-var fs = require("fs");
-var input, data, json;
+//Variables
+var data = window.localStorage;
+var input;
+var json;
 var filename = "data.txt";
+var audio = new Audio('audio1.mp3');
 
-function play() {
-  var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');
-  audio.play();
-}
+//EventListener
+document.querySelector("#saveBtn").addEventListener("click", saveData);
+document.querySelector("#end").addEventListener("load", loadData);
+document.querySelector("#end").dispatchEvent(new Event("load"));
 
-document.getElementsByName('save').addEventListener("click", saveData);
-document.getElementsByName('save').addEventListener("click", play);
-
+//Functions
 function saveData() {
 
   input = String(document.querySelector("body > select").selectedOptions[0].value);
-  data = '{"selected": '+ input +'}';
 
-  json = JSON.stringify(data);
+  data.setItem("selected", input);
 
-  fs.writeFile(filename, json, "utf8", callback);
   audio.play();
+  alert("Klasse Gespeichert!");
 }
 
 function loadData() {
-
+  console.log("Ende");
+  var selector = document.querySelector("body > select");
+  selector.value = data.getItem("selected");
+  selector.dispatchEvent(new Event("change"));
 }
