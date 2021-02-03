@@ -12,18 +12,18 @@ document.querySelector("#end").dispatchEvent(new Event("load"));
 
 //Functions
 function saveData() {
-
   input = String(document.querySelector("body > select").selectedOptions[0].value);
-
   data.setItem("selected", input);
-
   audio.play();
   alert("Klasse Gespeichert!");
+
+  console.log("Daten gespeichert");
 }
 
 function loadData() {
-  console.log("Ende");
   var selector = document.querySelector("body > select");
   selector.value = data.getItem("selected");
   selector.dispatchEvent(new Event("change"));
+
+  console.log("Daten geladen");
 }

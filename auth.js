@@ -6,3 +6,5 @@ var url = "https://stundenplan.berufskolleg-bottrop.de/schueler/",
 
 xhr.open("POST", url, true, user, pass);
 xhr.send();
+
+console.log("Anmeldedaten geladen");
