@@ -1,5 +1,11 @@
+//Variablen
+var toggleKal = true;
+var btnKal = document.querySelector("#kalender");
+
 //EventListner
 document.querySelector("#sel").addEventListener("change", reload);
+btnKal.addEventListener("click", changeToKal);
+
 
 //functions
 function getWeekNumber() {
@@ -35,5 +41,18 @@ function reload(){
   }else{
     var url = "default.html";
     document.querySelector("#exFrame").src = url;
+  }
+}
+
+function changeToKal(){
+  if(toggleKal){
+    toggleKal = false;
+    btnKal.textContent = "Stundenplan"
+    var url = "https://moodle.berufskolleg-bottrop.de/calendar/view.php?view=upcoming";
+    document.querySelector("#exFrame").src = url;
+  }else{
+    toggleKal = true;
+    btnKal.textContent = "Kalender"
+    reload();
   }
 }

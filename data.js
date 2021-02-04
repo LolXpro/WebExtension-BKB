@@ -1,7 +1,6 @@
 //Variables
 var data = window.localStorage;
-var input;
-var json;
+var input, json;
 var filename = "data.txt";
 var audio = new Audio('audio1.mp3');
 
