@@ -9,8 +9,14 @@ var divF = document.querySelector("#divF");
 //EventListner
 document.querySelector("#sel").addEventListener("change", reload);
 btnKal.addEventListener("click", changeToKal);
-divB.addEventListener("click", changeDate);
-divF.addEventListener("click", changeDate);
+divB.addEventListener("click", function () {
+  togglePrev = 0;
+  reload();
+});
+divF.addEventListener("click", function (){
+    togglePrev=1;
+    reload();
+});
 
 //Funktionen
 function getWeekNumber() {
@@ -45,11 +51,11 @@ function reload(){
     frame.src = url;
 
     if(togglePrev){
-      divB.hidden = true;
-      divF.hidden = false;
+      divB.hidden = false;
+      divF.hidden = true;
     }else {
-        divB.hidden = false;
-        divF.hidden = true;
+        divB.hidden = true;
+        divF.hidden = false;
     }
   }else{
     var url = "default.html";
@@ -73,19 +79,5 @@ function changeToKal(){
 
     divB.hidden = true;
     divF.hidden = true;
-  }
-}
-
-function changeDate(){
-  if(togglePrev){
-    togglePrev=0;
-    divB.hidden = false;
-    divF.hidden = true;
-    reload();
-  }else {
-    togglePrev=1;
-    divB.hidden = true;
-    divF.hidden = false;
-    reload();
   }
 }
