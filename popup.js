@@ -79,13 +79,13 @@ function changeToKal(){
 function changeDate(){
   if(togglePrev){
     togglePrev=0;
-    divB.hidden = true;
-    divF.hidden = false;
+    divB.hidden = false;
+    divF.hidden = true;
     reload();
   }else {
     togglePrev=1;
-    divB.hidden = false;
-    divF.hidden = true;
+    divB.hidden = true;
+    divF.hidden = false;
     reload();
   }
 }
