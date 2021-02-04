@@ -9,11 +9,12 @@
     <script src="auth.js" charset="utf-8"></script>
     <div id="buttonList">
       <button type="button" id="saveBtn">Speichern</button>
+      <a><button type="button" id="kalender">Kalender</button></a>
       <a href="https://moodle.berufskolleg-bottrop.de" target="_blank"><button>Moodle</button></a>
       <a href="https://scloud.berufskolleg-bottrop.de" target="_blank"><button>SCloud</button></a>
       <a href="https://www.berufskolleg-bottrop.de/" target="_blank"><button>Schulwebsite</button></a>
-      <a><button type="button" id="kalender">Kalender</button></a>
     </div>
+
     <select id="sel" class="selectbox">
       <option value="0">Start</option>
       <option value="1">1G 18 A</option>
@@ -134,12 +135,18 @@
       <option value="116">LA 20 B</option>
       <option value="117">ext Ber</option>
     </select>
-
     <iframe id="exFrame" src="default.html" scrolling="auto"></iframe>
+
+    <div id="divB" hidden>
+      <img src="src/pfeil.png" alt="<-" id="backward"/>
+    </div>
+
+    <div id="divF">
+      <img src="src/pfeil.png" alt="->" id="forward"/>
+    </div>
     <p id="end"></p>
 
     <script src="popup.js" charset="utf-8"></script>
     <script src="data.js" charset="utf-8"></script>
-
   </body>
 </html>

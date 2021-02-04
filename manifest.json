@@ -8,8 +8,8 @@
   },
   "description": "Schnellfenster  für den BKB Stundenplan; Entwickler: Nicolas Groß und Laslo Bertalan",
   "icons": {
-    "48": "logo48.png",
-    "96": "logo96.png"
+    "48": "src/logo48.png",
+    "96": "src/logo96.png"
   },
 
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",

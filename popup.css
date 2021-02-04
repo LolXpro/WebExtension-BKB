@@ -6,7 +6,7 @@ body{
   width: 705px
 
 }
-div{
+#buttonList{
   margin: 0;
   margin-top: 15px;
   position: absolute;
@@ -41,12 +41,58 @@ button:hover{
 button:active{
     background-color: #7C7C7C;
 }
+
+#backward,#forward{
+  position: fixed;
+  transform-origin: right;
+  top: 27%;
+}
+
+#backward{
+  left: -30%;
+  transform: scaleX(-1) scale(0.3) rotate(-90deg);
+}
+
+#forward{
+  left: 58%;
+  transform: scaleX(1) scale(0.3) rotate(-90deg);
+}
+
+#divB,#divF{
+  height: 100%;
+  width: 20%;
+  margin-top: 57px;
+  position: fixed;
+}
+
+#divB{
+  top: 0px;
+  left: 0px;
+}
+
+#divF{
+  top: 0px;
+  right: 23px;
+}
+
+#divB:hover{
+  background: linear-gradient(to right, black, white);
+  opacity: 50%;
+  cursor: pointer;
+}
+
+#divF:hover{
+  background: linear-gradient(to left, black, white);
+  opacity: 50%;
+  cursor: pointer;
+}
+
 #sel
 {
          width: 90px;
          font-size: 16px;
-
 }
+
 #exFrame {
   background-color: white;
   transform: scale(0.9);

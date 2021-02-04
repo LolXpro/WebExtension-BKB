@@ -1,13 +1,18 @@
 //Variablen
-var toggleKal = true;
+var toggleKal = false;
+var togglePrev = 0;
+var frame = document.querySelector("#exFrame");
 var btnKal = document.querySelector("#kalender");
+var divB = document.querySelector("#divB");
+var divF = document.querySelector("#divF");
 
 //EventListner
 document.querySelector("#sel").addEventListener("change", reload);
 btnKal.addEventListener("click", changeToKal);
+divB.addEventListener("click", changeDate);
+divF.addEventListener("click", changeDate);
 
-
-//functions
+//Funktionen
 function getWeekNumber() {
     var d = new Date();
     // Copy date so don't modify original
@@ -24,7 +29,7 @@ function getWeekNumber() {
 }
 
 function reload(){
-  var i = String(getWeekNumber());
+  var i = String(getWeekNumber() + togglePrev);
   var k = String(document.querySelector("body > select").selectedOptions[0].value);
   if(k!=0){
 
@@ -37,22 +42,50 @@ function reload(){
     }
 
     var url = "https://stundenplan.berufskolleg-bottrop.de/schueler/" + i + "/c/c" + k + ".htm";
-    document.querySelector("#exFrame").src = url;
+    frame.src = url;
+
+    if(togglePrev){
+      divB.hidden = true;
+      divF.hidden = false;
+    }else {
+        divB.hidden = false;
+        divF.hidden = true;
+    }
   }else{
     var url = "default.html";
-    document.querySelector("#exFrame").src = url;
+    frame.src = url;
+
+    divB.hidden = true;
+    divF.hidden = true;
   }
 }
 
 function changeToKal(){
   if(toggleKal){
     toggleKal = false;
-    btnKal.textContent = "Stundenplan"
-    var url = "https://moodle.berufskolleg-bottrop.de/calendar/view.php?view=upcoming";
-    document.querySelector("#exFrame").src = url;
+    btnKal.textContent = "Kalender"
+    reload();
   }else{
     toggleKal = true;
-    btnKal.textContent = "Kalender"
+    btnKal.textContent = "Stundenplan"
+    var url = "https://moodle.berufskolleg-bottrop.de/calendar/view.php?view=upcoming";
+    frame.src = url;
+
+    divB.hidden = true;
+    divF.hidden = true;
+  }
+}
+
+function changeDate(){
+  if(togglePrev){
+    togglePrev=0;
+    divB.hidden = true;
+    divF.hidden = false;
+    reload();
+  }else {
+    togglePrev=1;
+    divB.hidden = false;
+    divF.hidden = true;
     reload();
   }
 }
