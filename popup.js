@@ -14,8 +14,8 @@ divB.addEventListener("click", function () {
   reload();
 });
 divF.addEventListener("click", function (){
-    togglePrev=1;
-    reload();
+  togglePrev=1;
+  reload();
 });
 
 //Funktionen
@@ -64,6 +64,8 @@ function reload(){
     divB.hidden = true;
     divF.hidden = true;
   }
+
+  console.log("iFrame neu geladen");
 }
 
 function changeToKal(){

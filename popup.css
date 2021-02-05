@@ -59,15 +59,15 @@ button:active{
 }
 
 #divB,#divF{
-  height: 100%;
+  height: 85%;
   width: 20%;
-  margin-top: 57px;
+  margin-top: 58px;
   position: fixed;
 }
 
 #divB{
   top: 0px;
-  left: 0px;
+  left: 1%;
 }
 
 #divF{
