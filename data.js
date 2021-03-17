@@ -8,9 +8,6 @@ var audio = new Audio('src/audio1.mp3');
 document.querySelector("#saveBtn").addEventListener("click", saveData);
 document.querySelector("#end").addEventListener("load", loadData);
 
-//Events
-document.querySelector("#end").dispatchEvent(new Event("load"));
-
 //Funktionen
 function saveData() {
   input = String(document.querySelector("body > select").selectedOptions[0].value);
