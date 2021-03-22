@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Einstellungen</h2>
+    <div class="">
+      <select id="sel" class="selectbox">
+        <option value="0">Start</option>
+      </select>
+      <button type="button" id="saveBtn">Speichern</button>
+    </div>
+
+    <input type="checkbox" id="aktStund">
+    <label for="aktStund">Aktuelle Stunde anzeigen</label><br>
+    <input type="checkbox" id="lehrMod">
+    <label for="lehrMod">Lehrermodus</label><br>
+
+    <div id="lehrDat" hidden>
+      <input type="text" id="lehrUser" value="">
+      <input type="text" id="lehrPass" value="">
+      <button type="button" id="lehrSend">Senden</button>
+      <br>
+      <input type="checkbox" id="lehrSave">
+      <label for="lehrMod">Daten speichern</label>
+    </div>
+
+    <script src="settings.js" charset="utf-8"></script>
+    <script src="optionLoader.js" charset="utf-8"></script>
+  </body>
+</html>

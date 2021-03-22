@@ -1,12 +1,12 @@
 {
   "name": "BKB Stundenplan",
-  "version": "1.3",
+  "version": "1.3.1",
   "manifest_version": 2,
 
   "developer": {
     "name": "Nicolas Groß"
   },
-  "description": "Schnellfenster  für den BKB Stundenplan; Entwickler: Nicolas Groß und Laslo Bertalan",
+  "description": "Schnellfenster  für den BKB Stundenplan; Entwickler: Nicolas Groß; Startbild/Kurzanleitung: Laslo Bertalan",
   "icons": {
     "48": "src/logo48.png",
     "96": "src/logo96.png"

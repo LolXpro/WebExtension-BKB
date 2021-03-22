@@ -4,20 +4,26 @@
     <meta charset="utf-8">
     <title>BKB Stundenplan</title>
     <link rel="stylesheet" href="popup.css">
+
+    <script src="data.js" charset="utf-8"></script>
   </head>
   <body id="body">
+    <div id="selectList" hidden>
+      <select id="art" class="selectbox">
+        <option value="0">Klasse</option>
+      </select>
+    </div>
+
     <div id="buttonList">
-      <button type="button" id="saveBtn">Speichern</button>
       <a><button type="button" id="kalender">Kalender</button></a>
       <a href="https://moodle.berufskolleg-bottrop.de" target="_blank"><button>Moodle</button></a>
       <a href="https://scloud.berufskolleg-bottrop.de" target="_blank"><button>SCloud</button></a>
       <a href="https://www.berufskolleg-bottrop.de/" target="_blank"><button>Schulwebsite</button></a>
+      <a><button type="button" id="settings">Einstellungen</button></a>
     </div>
 
-    <select id="sel" class="selectbox">
-      <option value="0">Start</option>
-    </select>
     <iframe id="exFrame" src="default.html" scrolling="auto"></iframe>
+
 
     <div id="divB" hidden>
       <img src="src/pfeil.png" alt="<-" id="backward"/>
@@ -28,9 +34,7 @@
     </div>
     <p id="end"></p>
 
-    <script src="popup.js" charset="utf-8"></script>
     <script src="auth.js" charset="utf-8"></script>
-    <script src="optionLoader.js" charset="utf-8"></script>
-    <script src="data.js" charset="utf-8"></script>
+    <script src="frameLoader.js" charset="utf-8"></script>
   </body>
 </html>

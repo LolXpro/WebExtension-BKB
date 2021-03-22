@@ -1,12 +1,14 @@
-var xhrOL = new XMLHttpRequest();
-var url = "https://stundenplan.berufskolleg-bottrop.de/schueler/frames/navbar.htm",
- user = "schueler",
- pass = "stundenplan";
- var classesRaw, classes;
- var selector = document.querySelector("#sel");
+//Variablen
+var xhrOL = new XMLHttpRequest(),
+  url = "https://stundenplan.berufskolleg-bottrop.de/schueler/frames/navbar.htm",
+  user = "schueler",
+  pass = "stundenplan",
+  classesRaw, classes,
+  selector = document.querySelector("#sel");
 
-xhrOL.open("Get", url, true, user, pass);
-xhrOL.onreadystatechange = function () {
+//EventListener
+xhrOL.addEventListener("readystatechange", ready);
+function ready() {
   if(xhrOL.readyState == 4){
     var response = xhrOL.response;
     var x = response.indexOf("var classes = [");
@@ -16,20 +18,24 @@ xhrOL.onreadystatechange = function () {
     y = classesRaw.lastIndexOf('"');
     classes = classesRaw.slice(x, y).split('","');
 
-    makeOptions();
+    makeOptions(classes, selector);
+    loadSettings();
   }
 }
-xhrOL.send();
 
-function makeOptions() {
-  for(var i=0; i < classes.length; i++){
+//Funktionen
+function makeOptions(type, target) {
+  for(var i=0; i < types.length; i++){
     var option = document.createElement("option");
     option.value = i+1;
-    option. text = classes[i];
-    selector.appendChild(option);
+    option.text = type[i];
+    target.appendChild(option);
   }
-  //Events
-  document.querySelector("#end").dispatchEvent(new Event("load"));
-  
+  //document.querySelector("#end").dispatchEvent(new Event("load"));
+
   console.log("Klassen geladen")
 }
+
+//Anderes
+xhrOL.open("Get", url, true, user, pass);
+xhrOL.send();
